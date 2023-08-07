@@ -17,3 +17,5 @@ jobs:
       uses: astronomer/deploy-action@v0.2
       with:
         deployment-id: cll163u8u400168r0e4xvrliuq
+        pytest: true
+        pytest-file: /tests/test_dag_integrity.py
