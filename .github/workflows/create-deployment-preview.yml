@@ -19,4 +19,4 @@ jobs:
         action: create-deployment-preview
         deployment-id: cll163u8u400168r0e4xvrliuq
         pytest: true
-        pytest-file: /tests/test-tags.py
+        pytest-file: /tests/test_dag_integrity.py
