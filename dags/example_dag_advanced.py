@@ -98,7 +98,7 @@ def get_activity(day_name: str) -> str:
 #   https://registry.astronomer.io/providers/apache-airflow/modules/pythonvirtualenvoperator
 @task.virtualenv(requirements=["beautifulsoup4==4.11.2"])
 def inviting_friends(subject: str, body: str) -> None:
-    from bs4 import 
+    from bs4 import BeautifulSoup
 
     print("Inviting friends...")
     html_doc = f"<title>{subject}</title><p>{body}</p>"
