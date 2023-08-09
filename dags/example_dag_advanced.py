@@ -94,6 +94,7 @@ def get_activity(day_name: str) -> str:
     return f"weekend_activities.{activity_id}"
 
 
+
 # This the TaskFlow API equivalent to the PythonVirtualEnvOperator:
 #   https://registry.astronomer.io/providers/apache-airflow/modules/pythonvirtualenvoperator
 @task.virtualenv(requirements=["beautifulsoup4==4.11.2"])
