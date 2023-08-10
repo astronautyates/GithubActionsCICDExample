@@ -1,19 +1,20 @@
-name: Astronomer CI - Deploy code to main Deployment
+name: Astronomer CI - Delete Deployment Preview
 
 on:
-  push:
+  delete:
     branches:
-      - main
+    - "**"
 
 env:
-  ## Set your Workspace API key token as a GitHub secret
+  ## Sets Deployment API key credentials as environment variables
   ASTRO_API_TOKEN: ${{ secrets.ASTRO_API_TOKEN }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy code to main Deployment
+    - name: Create Deployment Preview
       uses: astronomer/deploy-action@v0.2
       with:
+        action: delete-deployment-preview
         deployment-id: cll163u8u400168r0e4xvrliuq
